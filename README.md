@@ -14,7 +14,7 @@ This project is an serverless ETL pipeline that extracts data from the YouTube D
 
 In the end, an AWS QuickSight dashboard is created for data visualization:
 <div align="center">
-  <img alt="QuickSight Dashboard" src="img/quicksight-dashboard.png" width="75%">
+  <img alt="QuickSight Dashboard" src="img/dashboard.png" width="75%">
 </div>
 
 ## Pipeline Architecture
