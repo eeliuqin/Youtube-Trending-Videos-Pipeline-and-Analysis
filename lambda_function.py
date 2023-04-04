@@ -21,8 +21,8 @@ def create_tables(connection):
     query1 = f"""
         CREATE TABLE IF NOT EXISTS {TRENDING_RECORD_TABLE} (
             id INT AUTO_INCREMENT PRIMARY KEY,
-            video_id VARCHAR(255),
-            channel_id VARCHAR(255),
+            video_id VARCHAR(255) NOT NULL,
+            channel_id VARCHAR(255) NOT NULL,
             `rank` INT,
             views_millions DECIMAL(10,2),
             extracted_at TIMESTAMP,
@@ -33,7 +33,7 @@ def create_tables(connection):
     query2 = f"""
         CREATE TABLE IF NOT EXISTS {TRENDING_VIDEO_TABLE} (
             id INT AUTO_INCREMENT PRIMARY KEY,
-            video_id VARCHAR(255),
+            video_id VARCHAR(255) NOT NULL,
             title VARCHAR(255),
             duration_sec DECIMAL(10,1),
             tags VARCHAR(255),
@@ -45,7 +45,7 @@ def create_tables(connection):
     query3 = f"""
         CREATE TABLE IF NOT EXISTS {TRENDING_VIDEO_CHANNEL_TABLE} (
             id INT AUTO_INCREMENT PRIMARY KEY,
-            channel_id VARCHAR(255),
+            channel_id VARCHAR(255) NOT NULL,
             channel_title VARCHAR(255),
             custom_url VARCHAR(255),
             country VARCHAR(255),

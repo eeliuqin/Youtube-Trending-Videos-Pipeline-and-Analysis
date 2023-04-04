@@ -12,13 +12,13 @@ class YoutubeVideo:
     ID_SIZE_LIMIT = 50
     YOUTUBE_SEARCH_API_URL = "https://youtube-search-and-download.p.rapidapi.com/trending"
 
-    def __init__(self, youtube_api_key, rapid_api_key):
+    def __init__(self, youtube_api_key: str, rapid_api_key: str):
         self.youtube_api_key = youtube_api_key
         self.rapid_api_key = rapid_api_key
         try:
             self.youtube = build(self.YOUTUBE_API_SERVICE_NAME, self.YOUTUBE_API_VERSION, developerKey=self.youtube_api_key)
         except Exception as e:
-            print("Found error when building youtube video: {e}")
+            print(f"Found error when building youtube video: {e}")
             raise
 
 
@@ -240,7 +240,7 @@ class YoutubeVideo:
         return df
     
 
-    def get_combined_data(self, ids: list, request_method: callable, chunk_size: int):
+    def get_combined_data(self, ids: list, request_method: callable, chunk_size: int) -> pd.DataFrame:
         """ Concat the result of calling request_method
             whose parameter is the ids split by chunk_size
         """
