@@ -1,4 +1,4 @@
-# YouTube Trending Videos ETL Pipeline
+# YouTube Trending Videos ETL Pipeline and Analysis
 
 ## TABLE OF CONTENTS
 
@@ -14,7 +14,7 @@ This project is an serverless ETL pipeline that extracts data from the YouTube D
 
 In the end, an AWS QuickSight dashboard is created for data visualization:
 <div align="center">
-  <img alt="QuickSight Dashboard" src="img/quicksight-dashboard.png" width="80%">
+  <img alt="QuickSight Dashboard" src="img/quicksight-dashboard.png" width="75%">
 </div>
 
 ## Pipeline Architecture
@@ -40,11 +40,11 @@ The architecture of the pipeline is as follows:
 ## Data Analysis using SQL
 
 We can run various queries and analyses to gain deeper insights and make data-driven decisions, for example:
-- Descriptive statistics: the top number of trending videos, channels, median duration, average days in trending, etc.
+- Descriptive statistics: total number of trending videos/channels, median video duration, average days in trending, etc.
 - Top N videos/categories/tags
 - Trends of popularity
 
-Please check [data analysis using SQL]() for details.
+See the notebook [data analysis using SQL](https://github.com/eeliuqin/AWS-ETL-Pipeline-YT-Trending-Videos/blob/main/data-analysis-using-sql.ipynb) for details.
 
 ## Reference Links
 
