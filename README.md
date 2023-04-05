@@ -5,12 +5,12 @@
 * [Introduction](#introduction)
 * [Pipeline Architecture](#pipeline-architecture)
 * [Database Diagrams](#database-diagrams)
-* [Data analysis using SQL](#data-analysis-using-sql)
+* [Data Analysis using SQL](#data-analysis-using-sql)
 * [Reference Links](#reference-links)
 
 ## Introduction
 
-This project is an serverless ETL pipeline that extracts data from the YouTube Data API, transforms it, and loads it into a AWS RDS MySQL database. The pipeline is triggered daily using AWS Lambda.
+For this project, I developed a serverless ETL pipeline that leverages the YouTube Data API to extract data on trending videos, transform the data, and load it into an AWS RDS MySQL database. The pipeline is designed to run on a daily basis. By implementing this pipeline, I was able to efficiently process large amounts of data and make it readily available for analysis.
 
 In the end, an AWS QuickSight dashboard is created for data visualization:
 <div align="center">
@@ -51,7 +51,7 @@ See the notebook [data analysis using SQL](https://github.com/eeliuqin/AWS-ETL-P
 - [Youtube Data API Overview](https://developers.google.com/youtube/v3/docs)
 - [Create and Connect to a MySQL Database with Amazon RDS](https://aws.amazon.com/getting-started/hands-on/create-mysql-db/)
 - [Creating Lambda container images](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html)
-
+- [Tutorial: Schedule AWS Lambda functions using EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-run-lambda-schedule.html)
 
 
 
